@@ -1,0 +1,32 @@
+{
+  "name": "laboman_tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node -r dotenv/config src/index.js",
+    "cdf_lis": "node src/cdf_lis.js",
+    "ct90": "node src/ct90.js",
+    "sebia": "node src/sebia.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlieStras/laboman_tester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlieStras/laboman_tester/issues"
+  },
+  "homepage": "https://github.com/CharlieStras/laboman_tester#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "prompts": "^2.3.2",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
