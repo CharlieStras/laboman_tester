@@ -21,7 +21,7 @@ const XN_RESULT = 'xn_result';
     name: 'action',
     message: 'Choose your action',
     choices: [
-      { title: 'Write ret.txt', value: CDF_LIS_WRITE_RET_ORDER },
+      { title: 'CDF_LIS: Write ret.txt', value: CDF_LIS_WRITE_RET_ORDER },
       {
         title: 'CT_90: Send SI order query',
         value: CT_90_SI_ORDER_QUERY,

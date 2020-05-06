@@ -10,6 +10,7 @@ const {
   convertString,
   formatDate,
   writAndLogMessage,
+  customSignale,
 } = require('../../utils');
 const {
   sampleID,
@@ -101,7 +102,7 @@ function connectAndSendData(sendBuffer) {
 
   client.on('data', (data) => {
     const dataStr = data.toString();
-    signale.pending(`<-: ${convertString(dataStr)}`);
+    customSignale.receive(`${convertString(dataStr)}`);
 
     if (dataStr.includes(`${STX}S2`)) {
       client.end('', () => signale.success('Completed!'));

@@ -13,6 +13,7 @@ const {
   addChecksum,
   formatDate,
   writAndLogMessage,
+  customSignale,
 } = require('../../utils');
 const { sampleID, rackID, positionNO } = require('./data');
 
@@ -45,7 +46,7 @@ function connectAndSendData(sendBuffer) {
 
   client.on('data', (data) => {
     const dataStr = data.toString();
-    signale.pending(`<-: ${convertString(dataStr)}`);
+    customSignale.receive(`${convertString(dataStr)}`);
 
     if (dataStr == ACK) {
       if (sendBuffer.length) {

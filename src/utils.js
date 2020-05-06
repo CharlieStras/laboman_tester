@@ -1,4 +1,28 @@
-const signale = require('signale');
+const { Signale } = require('signale');
+
+const options = {
+  disabled: false,
+  interactive: false,
+  logLevel: 'info',
+  secrets: [],
+  stream: process.stdout,
+  types: {
+    send: {
+      badge: '▶️',
+      color: 'blue',
+      label: 'send',
+      logLevel: 'info',
+    },
+    receive: {
+      badge: '◀️',
+      color: 'cyan',
+      label: 'receive',
+      logLevel: 'info',
+    },
+  },
+};
+
+const customSignale = new Signale(options);
 
 const ENQ = '\x05';
 const STX = '\x02';
@@ -20,6 +44,7 @@ module.exports = {
   addChecksum,
   formatDate,
   writAndLogMessage,
+  customSignale,
 };
 
 function convertString(str) {
@@ -93,6 +118,6 @@ function formatDate(date) {
 
 function writAndLogMessage(client, message) {
   client.write(Buffer.from(message), () => {
-    signale.pending(`->: ${convertString(message)}`);
+    customSignale.send(`${convertString(message)}`);
   });
 }
