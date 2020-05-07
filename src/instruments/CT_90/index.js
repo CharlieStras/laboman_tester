@@ -1,4 +1,3 @@
-const net = require('net');
 const signale = require('signale');
 
 const { host, ct90Port: port } = require('../../config');
@@ -12,8 +11,9 @@ const {
   convertString,
   addChecksum,
   formatDate,
-  writAndLogMessage,
+  writeAndLogMessage,
   customSignale,
+  netConnectPromise,
 } = require('../../utils');
 const { sampleID, rackID, positionNO } = require('./data');
 
@@ -25,7 +25,7 @@ module.exports = {
   sendOrderQuery,
 };
 
-function sendOrderQuery(inqueryType, userFieldNO2) {
+async function sendOrderQuery(inqueryType, userFieldNO2) {
   const date = formatDate(new Date());
   const sendBuffer = addChecksum([
     `${ENQ}`,
@@ -35,28 +35,52 @@ function sendOrderQuery(inqueryType, userFieldNO2) {
     `${EOT}`,
   ]);
 
-  connectAndSendData(sendBuffer);
+  await connectAndSendData(sendBuffer);
 }
 
-function connectAndSendData(sendBuffer) {
-  const client = net.connect({ port, host }, () => {
-    signale.success(`Connected. Host: ${host}, Port: ${port}`);
-    writAndLogMessage(client, sendBuffer.shift());
-  });
-
-  client.on('data', (data) => {
-    const dataStr = data.toString();
-    customSignale.receive(`${convertString(dataStr)}`);
-
-    if (dataStr == ACK) {
-      if (sendBuffer.length) {
-        writAndLogMessage(client, sendBuffer.shift());
+async function connectAndSendData(sendBuffer) {
+  return netConnectPromise({ port, host })
+    .then((client) => {
+      signale.success(`Connected. Host: ${host}, Port: ${port}`);
+      return client;
+    })
+    .then((client) => {
+      writeAndLogMessage(client, sendBuffer.shift());
+      return onEventPromise(client, 'data');
+    })
+    .catch((err) => {
+      if (err.errno == 'ENOTFOUND') {
+        signale.fatal(
+          `Please make sure the host IP address is ${err.hostname}`
+        );
+      } else if (err.message == 'connect timeout') {
+        signale.fatal(
+          `Connection timed out! Please make sure receiver is running and listening to port ${port}`
+        );
+      } else {
+        console.dir(err);
       }
-    } else if (dataStr != EOT) {
-      writAndLogMessage(client, ACK);
-    } else {
-      client.end();
-      signale.success('Completed!');
-    }
-  });
+    });
+
+  function onEventPromise(client, event) {
+    return new Promise((resolve) =>
+      client.on(event, (data) => {
+        const dataStr = data.toString();
+        customSignale.receive(`${convertString(dataStr)}`);
+
+        if (dataStr == ACK) {
+          if (sendBuffer.length) {
+            writeAndLogMessage(client, sendBuffer.shift());
+          }
+        } else if (dataStr != EOT) {
+          writeAndLogMessage(client, ACK);
+        } else {
+          client.end('', () => {
+            signale.success('Completed!');
+            resolve();
+          });
+        }
+      })
+    );
+  }
 }

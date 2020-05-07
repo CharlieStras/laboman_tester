@@ -1,3 +1,4 @@
+const net = require('net');
 const { Signale } = require('signale');
 
 const options = {
@@ -43,8 +44,9 @@ module.exports = {
   convertString,
   addChecksum,
   formatDate,
-  writAndLogMessage,
+  writeAndLogMessage,
   customSignale,
+  netConnectPromise,
 };
 
 function convertString(str) {
@@ -116,8 +118,28 @@ function formatDate(date) {
   return `${year}${month}${day}${hour}${minute}${second}`;
 }
 
-function writAndLogMessage(client, message) {
-  client.write(Buffer.from(message), () => {
+function writeAndLogMessage(client, message) {
+  return writePromise(client, Buffer.from(message)).then(() => {
     customSignale.send(`${convertString(message)}`);
+  });
+
+  function writePromise(client, message) {
+    return new Promise((resolve) => client.write(message, resolve));
+  }
+}
+
+function netConnectPromise(option) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      client.destroy();
+      reject(Error('connect timeout'));
+    }, 3000);
+
+    const client = net.connect(option, () => {
+      clearTimeout(timer);
+      resolve(client);
+    });
+
+    client.on('error', (err) => reject(err));
   });
 }

@@ -1,4 +1,3 @@
-const net = require('net');
 const signale = require('signale');
 
 const { host, xnPort: port } = require('../../config');
@@ -9,8 +8,9 @@ const {
   LF,
   convertString,
   formatDate,
-  writAndLogMessage,
+  writeAndLogMessage,
   customSignale,
+  netConnectPromise,
 } = require('../../utils');
 const {
   sampleID,
@@ -26,15 +26,15 @@ const paddedPositionNO = positionNO.padStart(2, '0');
 
 module.exports = { sendOrderQuery, sendResult };
 
-function sendOrderQuery(inquiryTimingDistinctionCode) {
+async function sendOrderQuery(inquiryTimingDistinctionCode) {
   const sendBuffer = [
     `${STX}R1000${paddedSampleID}00${paddedRackID}${paddedPositionNO}${inquiryTimingDistinctionCode}00000000000000000000000${ETX}`,
   ];
 
-  connectAndSendData(sendBuffer);
+  await connectAndSendData(sendBuffer);
 }
 
-function sendResult() {
+async function sendResult() {
   const date = formatDate(new Date());
   const {
     D1U,
@@ -84,28 +84,58 @@ function sendResult() {
     `DSU0005970${DSU.map((x) => x.value).join('')}${ETX}`,
   ];
 
-  connectAndSendData(sendBuffer);
+  await connectAndSendData(sendBuffer);
 }
 
-function connectAndSendData(sendBuffer) {
-  const client = net.connect({ port, host }, () => {
-    signale.success(`Connected. Host: ${host}, Port: ${port}`);
-    if (sendBuffer.length > 1) {
-      while (sendBuffer.length) {
-        writAndLogMessage(client, sendBuffer.shift());
+async function connectAndSendData(sendBuffer) {
+  return netConnectPromise({ port, host })
+    .then((client) => {
+      signale.success(`Connected. Host: ${host}, Port: ${port}`);
+      return client;
+    })
+    .then(async (client) => {
+      if (sendBuffer.length > 1) {
+        while (sendBuffer.length) {
+          await writeAndLogMessage(client, sendBuffer.shift());
+        }
+        return new Promise((resolve) =>
+          client.end('', () => {
+            signale.success('Completed!');
+            resolve();
+          })
+        );
+      } else {
+        writeAndLogMessage(client, sendBuffer.shift());
       }
-      client.end('', () => signale.success('Completed!'));
-    } else {
-      writAndLogMessage(client, sendBuffer.shift());
-    }
-  });
+      return onEventPromise(client, 'data');
+    })
+    .catch((err) => {
+      if (err.errno == 'ENOTFOUND') {
+        signale.fatal(
+          `Please make sure the host IP address is ${err.hostname}`
+        );
+      } else if (err.message == 'connect timeout') {
+        signale.fatal(
+          `Connection timed out! Please make sure receiver is running and listening to port ${port}`
+        );
+      } else {
+        console.dir(err);
+      }
+    });
 
-  client.on('data', (data) => {
-    const dataStr = data.toString();
-    customSignale.receive(`${convertString(dataStr)}`);
+  function onEventPromise(client, event) {
+    return new Promise((resolve) =>
+      client.on(event, (data) => {
+        const dataStr = data.toString();
+        customSignale.receive(`${convertString(dataStr)}`);
 
-    if (dataStr.includes(`${STX}S2`)) {
-      client.end('', () => signale.success('Completed!'));
-    }
-  });
+        if (dataStr.includes(`${STX}S2`)) {
+          client.end('', () => {
+            signale.success('Completed!');
+            resolve();
+          });
+        }
+      })
+    );
+  }
 }

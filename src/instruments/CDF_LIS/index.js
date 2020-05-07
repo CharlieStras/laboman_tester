@@ -2,15 +2,16 @@ const fsPromises = require('fs').promises;
 const path = require('path');
 const signale = require('signale');
 
-const { sampleID, order, path: rootPath } = require('./data');
+const { sampleID, order } = require('./data');
+const { rootPath } = require('../../config');
 
 function writeRetFile() {
   const orderContent = `${sampleID},${order}|`;
   const retPath = path.resolve(rootPath, 'ret.txt');
 
-  fsPromises
+  return fsPromises
     .writeFile(retPath, orderContent)
-    .then(() => signale.success(`Write ret.txt. Content: {${orderContent}}`))
+    .then(() => signale.success(orderContent))
     .catch((err) => signale.fatal(err));
 }
 

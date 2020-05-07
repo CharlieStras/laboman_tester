@@ -41,8 +41,8 @@ const result = {
     },
     /**
      * - Indicates the status of the analysis.
-     * “0”: Success
-     * “1”: Error
+     * "0": Success
+     * "1": Error
      */
     {
       name: 'Analysis Status',
@@ -50,11 +50,11 @@ const result = {
     },
     /**
      * - Indicates judgment on the sample to determine the necessity for repeat analysis.
-     * “0”: Negative
-     * “1”: Positive
-     * “2”: Analysis error
-     * “3”: Positive and error
-     * “Q”: QC sample
+     * "0": Negative
+     * "1": Positive
+     * "2": Analysis error
+     * "3": Positive and error
+     * "Q": QC sample
      */
     {
       name: 'Judgment on Sample',
@@ -62,8 +62,8 @@ const result = {
     },
     /**
      * - Indicates whether the measured value of a blood cell type is normal.
-     * “0”: Normal
-     * “1”: Abnormal
+     * "0": Normal
+     * "1": Abnormal
      */
     {
       name: 'Positive (Diff)',
@@ -71,8 +71,8 @@ const result = {
     },
     /**
      * - Indicates whether there exists abnormality in blood cell morphology.
-     * “0”: Normal
-     * “1”: Abnormal
+     * "0": Normal
+     * "1": Abnormal
      */
     {
       name: 'Positive (Morph)',
@@ -80,8 +80,8 @@ const result = {
     },
     /**
      * - Indicates whether the blood cell count is normal.
-     * “0”: Normal
-     * “1”: Abnormal
+     * "0": Normal
+     * "1": Abnormal
      */
     {
       name: 'Positive (Count)',
@@ -89,8 +89,8 @@ const result = {
     },
     /**
      * - Indicates whether Error (Func) occurred.
-     * “0”: None of the following errors occurred.
-     * “1”: An error occurred except ID barcode reading error and Error (Result).
+     * "0": None of the following errors occurred.
+     * "1": An error occurred except ID barcode reading error and Error (Result).
      */
     {
       name: 'Error (Func)',
@@ -98,8 +98,8 @@ const result = {
     },
     /**
      * - Indicates whether Error (Result) occurred.
-     * “0”: None of the following errors occurred.
-     * “1”: One of the following analysis errors occurred: “Sample Not Asp Error”, “Low Blood Volume”, and “Low Count Error”.
+     * "0": None of the following errors occurred.
+     * "1": One of the following analysis errors occurred: "Sample Not Asp Error", "Low Blood Volume", and "Low Count Error".
      */
     {
       name: 'Error (Result)',
@@ -107,8 +107,8 @@ const result = {
     },
     /**
      * - Indicates whether the sample was analyzed with order.
-     * “0”: Analyzed without order
-     * “1”: Analyzed with order
+     * "0": Analyzed without order
+     * "1": Analyzed with order
      */
     {
       name: 'With/Without Order',
@@ -116,8 +116,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any WBC Abnormal IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of WBC Abnormal IP Message',
@@ -125,8 +125,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any WBC Suspect IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of WBC Suspect IP Message',
@@ -134,8 +134,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any RBC Abnormal IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of RBC Abnormal IP Message',
@@ -143,8 +143,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any RBC Suspect IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of RBC Suspect IP Message',
@@ -152,8 +152,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any PLT Abnormal IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of PLT Abnormal IP Message',
@@ -161,8 +161,8 @@ const result = {
     },
     /**
      * - Indicates whether there is any PLT Suspect IP message.
-     * “0”: No IP message
-     * “1”: IP message present
+     * "0": No IP message
+     * "1": IP message present
      */
     {
       name: 'Presence of PLT Suspect IP Message',
@@ -170,8 +170,8 @@ const result = {
     },
     /**
      * - Indicates whether SI units are used.
-     * “0”: SI units are not used
-     * “1”: SI units are used
+     * "0": SI units are not used
+     * "1": SI units are used
      */
     {
       name: 'Unit Information',
@@ -179,8 +179,8 @@ const result = {
     },
     /**
      * - Indicates with which channel the adopted WBC value was analyzed.
-     * “0”: WNR channel
-     * “1”: WDF channel
+     * "0": WNR channel
+     * "1": WDF channel
      */
     {
       name: 'WBC Information',
@@ -188,9 +188,9 @@ const result = {
     },
     /**
      * - Indicates with which channel the adopted PLT value was analyzed.
-     * “0”: RBC/PLT channel
-     * “1”: RET channel
-     * “2”: PLT-F channel
+     * "0": RBC/PLT channel
+     * "1": RET channel
+     * "2": PLT-F channel
      */
     {
       name: 'PLT Information',
@@ -198,8 +198,8 @@ const result = {
     },
     /**
      * - Indicates whether test was done with the WPC channel.
-     * “0”: Not tested
-     * “1”: Tested
+     * "0": Not tested
+     * "1": Tested
      */
     {
       name: 'WPC Information',
@@ -207,14 +207,14 @@ const result = {
     },
     /**
      * - Indicates the order type.
-     * “0”: Initial
-     * “1”: Initial/Repeat
-     * “2”: Rerun
-     * “3”: Rerun/Repeat
-     * “4”: Reflex
-     * “5”: Reflex/Repeat
-     * “6”: Manual
-     * “7”: Manual (Open)
+     * "0": Initial
+     * "1": Initial/Repeat
+     * "2": Rerun
+     * "3": Rerun/Repeat
+     * "4": Reflex
+     * "5": Reflex/Repeat
+     * "6": Manual
+     * "7": Manual (Open)
      */
     {
       name: 'Order Type',
@@ -222,19 +222,19 @@ const result = {
     },
     /**
      * - Indicates the evaluation result based on the Repeat/Rerun/Reflex rule (indicates which action to take next for the sample).
-     * “0”: None (there is no applicable rule, or evaluation based on the Repeat/Rerun/Reflex rule is not made)
-     * “1”: Repeat
-     * “2”: Rerun
-     * “3”: Reflex
+     * "0": None (there is no applicable rule, or evaluation based on the Repeat/Rerun/Reflex rule is not made)
+     * "1": Repeat
+     * "2": Rerun
+     * "3": Reflex
      * "4": Query to host
-     * * Set to “0” for manual analysis.
+     * * Set to "0" for manual analysis.
      */
     {
       name: 'Evaluation Based on Rerun Analysis Rule',
       value: '4',
     },
     /**
-     * - Indicates the Priority Code in alphanumeric characters. If being set not to output in the “Input and output priority code” of the service setting, “0” is always output.
+     * - Indicates the Priority Code in alphanumeric characters. If being set not to output in the "Input and output priority code" of the service setting, "0" is always output.
      */
     {
       name: 'Priority Code',
@@ -245,9 +245,9 @@ const result = {
       value: '0'.repeat(15),
     },
     /**
-     * - Indicates whether the Action Message “Confirm eosinophil and neutrophil count by other methods.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Confirm eosinophil and neutrophil count by other methods." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name:
@@ -259,72 +259,72 @@ const result = {
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Aged Sample?” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Aged Sample?" is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Aged Sample?',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Suspect sample, check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Suspect sample, check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Suspect sample, check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “The sample might be wrong. Check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "The sample might be wrong. Check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: The sample might be wrong. Check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Significant change in WBC. Check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Significant change in WBC. Check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Significant change in WBC. Check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Significant change in HGB. Check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Significant change in HGB. Check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Significant change in HGB. Check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Significant change in MCV. Check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Significant change in MCV. Check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Significant change in MCV. Check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Significant change in PLT. Check the sample.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Significant change in PLT. Check the sample." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Significant change in PLT. Check the sample.',
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Difference between WNR and WDF. Check the results.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Difference between WNR and WDF. Check the results." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name:
@@ -332,9 +332,9 @@ const result = {
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “Difference between RBC and RET. Check the results.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Difference between RBC and RET. Check the results." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name:
@@ -342,9 +342,9 @@ const result = {
       value: '0',
     },
     /**
-     * - Indicates whether the Action Message “The PLT test result may have low reliability.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "The PLT test result may have low reliability." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: The PLT test result may have low reliability.',
@@ -459,9 +459,9 @@ const result = {
       value: '001',
     },
     /**
-     * - Indicates whether the Action Message “Difference between PLT and PLT-F. Check the results.” is present.
-     * “0”: The Action Message is not present
-     * “1”: The Action Message present
+     * - Indicates whether the Action Message "Difference between PLT and PLT-F. Check the results." is present.
+     * "0": The Action Message is not present
+     * "1": The Action Message present
      */
     {
       name: 'Action Message: Difference between PLT and PLT-F channels.',
@@ -531,7 +531,7 @@ const result = {
     },
     /**
      * (XXXXXXF) [/uL]
-     * * If derived software handles the item as a research item, the Service settings (Output_AnalysisInformation) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research item, the Service settings (Output_AnalysisInformation) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'TC-BF#',
@@ -539,7 +539,7 @@ const result = {
     },
     /**
      * (XXXXF) [x10^(-2)%]
-     * * If derived software handles the item as a research item, it is not output. When the item is not output against order, “0”s are set to fill the specified number of characters.
+     * * If derived software handles the item as a research item, it is not output. When the item is not output against order, "0"s are set to fill the specified number of characters.
      */
     {
       name: 'HPC%',
@@ -547,7 +547,7 @@ const result = {
     },
     /**
      * (XXXXF) [x10^2/uL]
-     * * If derived software handles the item as a research item, it is not output. When the item is not output against order, “0”s are set to fill the specified number of characters.
+     * * If derived software handles the item as a research item, it is not output. When the item is not output against order, "0"s are set to fill the specified number of characters.
      */
     {
       name: 'IPF#',
@@ -612,11 +612,12 @@ const result = {
       value: '03370',
     },
     /**
+     * PLT
      * (XXXXF) [×10^3/uL]
      */
     {
       name: 'PLT',
-      value: '00760',
+      value: '00560',
     },
     /**
      * (XXXXF) [×10^(-1)%]
@@ -704,7 +705,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-1)fL]
-     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'PDW',
@@ -747,7 +748,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-1) %]
-     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'LFR',
@@ -755,7 +756,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-1) %]
-     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'MFR',
@@ -763,7 +764,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-1) %]
-     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'HFR',
@@ -771,7 +772,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-2) %]
-     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'PCT',
@@ -793,7 +794,7 @@ const result = {
     },
     /**
      * (XXXXXF) [×10/uL]
-     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'IG#',
@@ -801,7 +802,7 @@ const result = {
     },
     /**
      * (XXXXF) [×10^(-1)%]
-     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'IG%',
@@ -809,7 +810,7 @@ const result = {
     },
     /**
      * (XXXXXF) [/uL]
-     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, “0”s are assigned to this parameter to fill the specified number of characters.
+     * * If derived software handles the item as a research (Can be displayed in the main screen) item, the Service settings (Output Analysis Information) can be configured not to output the item. In this case, "0"s are assigned to this parameter to fill the specified number of characters.
      */
     {
       name: 'HPC#',
@@ -834,80 +835,80 @@ const result = {
   DBU: [
     //== WBC Abnormal ==//
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'WBC Abn Scattergram',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Neutropenia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Neutrophilia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Lymphopenia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Lymphocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Leukocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Monocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Eosinophilia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Basophilia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Leukocytopenia',
@@ -918,16 +919,16 @@ const result = {
       value: '0'.repeat(3),
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'NRBC Present',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'IG Present',
@@ -939,8 +940,8 @@ const result = {
     },
     //== WBC Suspect==//
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Blasts?',
@@ -951,8 +952,8 @@ const result = {
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Left Shift?',
@@ -963,8 +964,8 @@ const result = {
       value: '0'.repeat(4),
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Atypical Lympho?',
@@ -975,16 +976,16 @@ const result = {
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Blasts/Abn Lympho?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Abn lympho?',
@@ -996,80 +997,80 @@ const result = {
     },
     //== RBC Abnormal ==//
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'RBC Abn Distrib.',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Dimorphic Population',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Anisocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Microcytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Macrocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Hypochromia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Anemia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Erythrocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'RET Abn Scattergram',
       value: '1',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Reticulocytosis',
@@ -1081,32 +1082,32 @@ const result = {
     },
     //== RBC Suspect ==//
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'RBC Agglutination?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Turbidity/HGB Interf?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Iron Deficiency?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'HGB Defect?',
@@ -1117,24 +1118,24 @@ const result = {
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Fragments?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'iRBC?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'iRBC?(R)',
@@ -1146,32 +1147,32 @@ const result = {
     },
     //== PLT Abnormal ==//
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'PLT Abn Distrib.',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Thrombocytopenia',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Thrombocytosis',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'PLT Abn Scattergram',
@@ -1187,16 +1188,16 @@ const result = {
       value: '0'.repeat(2),
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'PLT Clumps?',
       value: '0',
     },
     /**
-     * “0”: Not applicable to flag
-     * “1”: Applicable to flag
+     * "0": Not applicable to flag
+     * "1": Applicable to flag
      */
     {
       name: 'Giant Platelet?',
@@ -1213,7 +1214,7 @@ const result = {
       value: ' 50',
     },
     /**
-     * - Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to “DISCRI 1” through “DISCRI 50”. The value is right-aligned with space padding.
+     * - Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to "DISCRI 1" through "DISCRI 50". The value is right-aligned with space padding.
      */
     {
       name: 'Data Y-axis Size',
@@ -1228,7 +1229,7 @@ const result = {
       value: '0',
     },
     /**
-     * - Indicates the lower discrete limit position. For example, LOWER DISCRI value “5” means the lower discrete limit is positioned at DISCRI 5.
+     * - Indicates the lower discrete limit position. For example, LOWER DISCRI value "5" means the lower discrete limit is positioned at DISCRI 5.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -1236,7 +1237,7 @@ const result = {
       value: '0006',
     },
     /**
-     * - Indicates the upper discrete limit position. For example, UPPER DISCRI value “25” means the upper discrete limit is positioned at DISCRI 25.
+     * - Indicates the upper discrete limit position. For example, UPPER DISCRI value "25" means the upper discrete limit is positioned at DISCRI 25.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -1244,7 +1245,7 @@ const result = {
       value: '0049',
     },
     /**
-     * - Indicates the ratio for normalization. Data at discrete positions “DISCRI 1” to “DISCRI 50” multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
+     * - Indicates the ratio for normalization. Data at discrete positions "DISCRI 1" to "DISCRI 50" multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
      */
     {
       name: 'RATIO (dividing ratio)',
@@ -1312,7 +1313,7 @@ const result = {
       value: ' 40',
     },
     /**
-     * - Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to “DISCRI 1” through “DISCRI 40”.
+     * - Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to "DISCRI 1" through "DISCRI 40".
      * The value is right-aligned with space padding.
      */
     {
@@ -1328,7 +1329,7 @@ const result = {
       value: '0',
     },
     /**
-     * - Indicates the lower discrete limit position. For example, LOWER DISCRI value “5” means the lower discrete limit is positioned at DISCRI 5.
+     * - Indicates the lower discrete limit position. For example, LOWER DISCRI value "5" means the lower discrete limit is positioned at DISCRI 5.
      * The value is right-aligned with zero padding.
      */
     {
@@ -1336,7 +1337,7 @@ const result = {
       value: '0001',
     },
     /**
-     * - Indicates the upper discrete limit position. For example, UPPER DISCRI value “25” means the upper discrete limit is positioned at DISCRI 25.
+     * - Indicates the upper discrete limit position. For example, UPPER DISCRI value "25" means the upper discrete limit is positioned at DISCRI 25.
      * The value is right-aligned with zero padding.
      */
     {
@@ -1344,7 +1345,7 @@ const result = {
       value: '0029',
     },
     /**
-     * - Indicates the ratio for normalization. Data at discrete positions “DISCRI 1” to “DISCRI 40” multiplied by Ratio equals to the particle size distribution data.
+     * - Indicates the ratio for normalization. Data at discrete positions "DISCRI 1" to "DISCRI 40" multiplied by Ratio equals to the particle size distribution data.
      * The value is right-aligned with zero padding.
      */
     {
@@ -1407,18 +1408,18 @@ const result = {
       value: '256',
     },
     /**
-     * - Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * - Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
       value: '003386',
     },
     /**
-     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -1440,18 +1441,18 @@ const result = {
       value: '256',
     },
     /**
-     * - Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * - Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
       value: '003148',
     },
     /**
-     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -1473,18 +1474,18 @@ const result = {
       value: '256',
     },
     /**
-     * - Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * - Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
       value: '000000',
     },
     /**
-     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -1505,18 +1506,18 @@ const result = {
       value: '256',
     },
     /**
-     * - Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * - Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
       value: '004866',
     },
     /**
-     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -1538,18 +1539,18 @@ const result = {
       value: '256',
     },
     /**
-     * - Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * - Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
       value: '000000',
     },
     /**
-     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * - Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -1756,7 +1757,7 @@ const result = {
      * 💡 Delta-He
      * (🔺XXXXF) [×10^(-1)pg]
      * *[amol] in SI units
-     * 🔺represents a sign. “-” (2Dh) is output for a negative value, and “0” (30h) for a positive value.
+     * 🔺represents a sign. "-" (2Dh) is output for a negative value, and "0" (30h) for a positive value.
      * XXXX represent the absolute value of the data, right-aligned with zero padding. F represents a flag.
      */
     {
@@ -1902,7 +1903,7 @@ const result = {
     /**
      * 💡 LYMPH%
      * (XXXXF) [×10^(-1)%]
-     * * The value “LYMPH%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "LYMPH%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'LYMPH%',
@@ -1911,7 +1912,7 @@ const result = {
     /**
      * 💡 MONO%
      * (XXXXF) [×10^(-1)%]
-     * * The value “MONO%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "MONO%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'MONO%',
@@ -1920,7 +1921,7 @@ const result = {
     /**
      * 💡 NEUT%
      * (XXXXF) [×10^(-1)%]
-     * * The value “NEUT%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "NEUT%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'NEUT%',
@@ -1929,7 +1930,7 @@ const result = {
     /**
      * 💡 EO%
      * (XXXXF) [×10^(-1)%]
-     * * The value “EO%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "EO%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'EO%',
@@ -1938,7 +1939,7 @@ const result = {
     /**
      * 💡 BASO%
      * (XXXXF) [×10^(-1)%]
-     * * The value “BASO%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "BASO%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'BASO%',
@@ -1947,7 +1948,7 @@ const result = {
     /**
      * 💡 LYMPH#
      * (XXXXXF) [x10/uL]
-     * * The value “LYMPH#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "LYMPH#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'LYMPH#',
@@ -1956,7 +1957,7 @@ const result = {
     /**
      * 💡 MONO#
      * (XXXXXF) [x10/uL]
-     * * The value “MONO#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "MONO#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'MONO#',
@@ -1965,7 +1966,7 @@ const result = {
     /**
      * 💡 NEUT#
      * (XXXXXF) [x10/uL]
-     * * The value “NEUT#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "NEUT#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'NEUT#',
@@ -1974,7 +1975,7 @@ const result = {
     /**
      * 💡 EO#
      * (XXXXXF) [x10/uL]
-     * * The value “EO#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "EO#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'EO#',
@@ -1983,7 +1984,7 @@ const result = {
     /**
      * 💡 BASO#
      * (XXXXXF) [x10/uL]
-     * * The value “BASO#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "BASO#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'BASO#',
@@ -2000,7 +2001,7 @@ const result = {
     /**
      * 💡 PDW
      * (XXXXF) [x10^(-1)fL]
-     * * The value “PDW” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "PDW" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'PDW',
@@ -2013,7 +2014,7 @@ const result = {
     /**
      * 💡 P-LCR
      * (XXXXF) [×10^(-1)%]
-     * * The value “P-LCR” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "P-LCR" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'P-LCR',
@@ -2034,7 +2035,7 @@ const result = {
     /**
      * 💡 LFR
      * (XXXXF) [×10^(-1)%]
-     * * The value “LFR” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "LFR" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'LFR',
@@ -2043,7 +2044,7 @@ const result = {
     /**
      * 💡 MFR
      * (XXXXF) [×10^(-1)%]
-     * * The value “MFR” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "MFR" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'MFR',
@@ -2052,7 +2053,7 @@ const result = {
     /**
      * 💡 HFR
      * (XXXXF) [×10^(-1)%]
-     * * The value “HFR” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "HFR" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'HFR',
@@ -2061,7 +2062,7 @@ const result = {
     /**
      * 💡 PCT
      * (XXXXF) [×10^(-2)%]
-     * * The value “PCT” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "PCT" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'PCT',
@@ -2078,7 +2079,7 @@ const result = {
     /**
      * 💡 IG#
      * (XXXXXF) [x10/uL]
-     * * The value “IG#” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "IG#" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'IG#',
@@ -2087,7 +2088,7 @@ const result = {
     /**
      * 💡 IG%
      * (XXXXF) [x10^(-1)%]
-     * * The value “IG%” displayed in the IPU’s Laboratory-Use-Only tab is output.
+     * * The value "IG%" displayed in the IPU’s Laboratory-Use-Only tab is output.
      */
     {
       name: 'IG%',
@@ -2608,7 +2609,7 @@ const result = {
     },
     /**
      * 💡 Data Y-axis Size
-     * Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to “DISCRI 1” through “DISCRI 50”. The value is right-aligned with space padding.
+     * Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to "DISCRI 1" through "DISCRI 50". The value is right-aligned with space padding.
      */
     {
       name: 'Data Y-axis Size',
@@ -2627,7 +2628,7 @@ const result = {
     },
     /**
      * 💡 LOWER DISCRI
-     * Indicates the lower discrete limit position. For example, LOWER DISCRI value “5” means the lower discrete limit is positioned at DISCRI 5.
+     * Indicates the lower discrete limit position. For example, LOWER DISCRI value "5" means the lower discrete limit is positioned at DISCRI 5.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -2636,7 +2637,7 @@ const result = {
     },
     /**
      * 💡 UPPER DISCRI
-     * Indicates the upper discrete limit position. For example, UPPER DISCRI value “25” means the upper discrete limit is positioned at DISCRI 25.
+     * Indicates the upper discrete limit position. For example, UPPER DISCRI value "25" means the upper discrete limit is positioned at DISCRI 25.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -2645,7 +2646,7 @@ const result = {
     },
     /**
      * 💡 RATIO (dividing ratio)
-     * Indicates the ratio for normalization. Data at discrete positions “DISCRI 1” to “DISCRI 50” multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
+     * Indicates the ratio for normalization. Data at discrete positions "DISCRI 1" to "DISCRI 50" multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
      */
     {
       name: 'RATIO (dividing ratio)',
@@ -2734,7 +2735,7 @@ const result = {
     },
     /**
      * 💡 Data Y-axis Size
-     * Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to “DISCRI 1” through “DISCRI 50”. The value is right-aligned with space padding.
+     * Indicates the maximum data value in the Y-axis (vertical) direction, that is, the maximum value in the data assigned to "DISCRI 1" through "DISCRI 50". The value is right-aligned with space padding.
      */
     {
       name: 'Data Y-axis Size',
@@ -2753,7 +2754,7 @@ const result = {
     },
     /**
      * 💡 LOWER DISCRI
-     * Indicates the lower discrete limit position. For example, LOWER DISCRI value “5” means the lower discrete limit is positioned at DISCRI 5.
+     * Indicates the lower discrete limit position. For example, LOWER DISCRI value "5" means the lower discrete limit is positioned at DISCRI 5.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -2762,7 +2763,7 @@ const result = {
     },
     /**
      * 💡 UPPER DISCRI
-     * Indicates the upper discrete limit position. For example, UPPER DISCRI value “25” means the upper discrete limit is positioned at DISCRI 25.
+     * Indicates the upper discrete limit position. For example, UPPER DISCRI value "25" means the upper discrete limit is positioned at DISCRI 25.
      * The output value is right-aligned with zero padding.
      */
     {
@@ -2771,7 +2772,7 @@ const result = {
     },
     /**
      * 💡 RATIO (dividing ratio)
-     * Indicates the ratio for normalization. Data at discrete positions “DISCRI 1” to “DISCRI 50” multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
+     * Indicates the ratio for normalization. Data at discrete positions "DISCRI 1" to "DISCRI 50" multiplied by Ratio equals to the particle size distribution data. The value is right-aligned with zero padding.
      */
     {
       name: 'RATIO (dividing ratio)',
@@ -2867,8 +2868,8 @@ const result = {
     },
     /**
      * 💡 Data Length
-     * Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
@@ -2876,10 +2877,10 @@ const result = {
     },
     /**
      * 💡 Scattergram Compression Info
-     * Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
@@ -2911,8 +2912,8 @@ const result = {
     },
     /**
      * 💡 Data Length
-     * Indicates the size of the data section in the scattergram. If there is no scattergram, “000000” is assigned. The value is right-aligned with zero padding.
-     * “000000” – “032768”
+     * Indicates the size of the data section in the scattergram. If there is no scattergram, "000000" is assigned. The value is right-aligned with zero padding.
+     * "000000" – "032768"
      */
     {
       name: 'Data Length',
@@ -2920,10 +2921,10 @@ const result = {
     },
     /**
      * 💡 Scattergram Compression Info
-     * Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A “Specifications for Scattergrams Compression” for decompressing scattergrams.)
-     * “0”: Not compressed
-     * “1”: Compressed
-     * *If there is no scattergram, “0” is assigned.
+     * Indicates whether the scattergram is compressed (Run-Length and Huffman). (See Appendix A "Specifications for Scattergrams Compression" for decompressing scattergrams.)
+     * "0": Not compressed
+     * "1": Compressed
+     * *If there is no scattergram, "0" is assigned.
      */
     {
       name: 'Scattergram Compression Info',
